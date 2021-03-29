@@ -1,3 +1,12 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+}
 .number {
   height: 200px;
   width: 200px;
@@ -6,4 +15,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5rem 10rem;
+}
+.even {
+  background-color: indianred;
+}
+.odd {
+  background-color: khaki;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  margin-top: 7rem;
+  text-align: center;
 }
