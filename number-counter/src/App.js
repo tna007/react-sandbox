@@ -39,7 +39,7 @@ class App extends Component {
         : "odd "
     }number`;
     return (
-      <div>
+      <div className="App">
         <Header />
         <h1 className={numberClass}>{this.state.counter}</h1>
         <div className="buttons">
