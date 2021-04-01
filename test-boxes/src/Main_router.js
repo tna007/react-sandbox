@@ -34,7 +34,7 @@ function Nav() {
 
 function MainRouter() {
   return (
-    <div>
+    <div className="MainRouter">
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
