@@ -1,33 +1,36 @@
 import React, { Component } from "react";
 
-const Box = (props) => {
+function Box(props) {
   const sayHi = () => {
-    console.log("clicked");
+    console.log("Yeee");
   };
   return (
     <div className="box">
       <h2>Name: {props.name}</h2>
       <p>Age: {props.age}</p>
       <p>Title: {props.title}</p>
-      <button onClick={sayHi}>Test</button>
+      <button onClick={sayHi}>Click Me</button>
     </div>
   );
-};
+}
 
-class Main extends Component {
+class Boxes extends Component {
   state = {
     persons: [
       {
+        id: 1,
         name: "Anh T",
         age: 25,
         title: "student",
       },
       {
+        id: 2,
         name: "Dan R",
         age: 28,
         title: "ceo",
       },
       {
+        id: 3,
         name: "Ted K",
         age: 29,
         title: "cfo",
@@ -39,16 +42,19 @@ class Main extends Component {
     this.setState({
       persons: [
         {
+          id: 1,
           name: "Dara T",
           age: 25,
           title: "student",
         },
         {
+          id: 2,
           name: "Louis R",
           age: 28,
           title: "ceo",
         },
         {
+          id: 3,
           name: "Cindy K",
           age: 29,
           title: "cfo",
@@ -62,20 +68,21 @@ class Main extends Component {
       <main>
         <button onClick={this.sayHi}>Hello from main component</button>
         <div>
+          {this.state.persons.map((person) => {
+            return (
+              <Box
+                name={person.name}
+                age={person.age}
+                title={person.title}
+                key={person.id}
+              />
+            );
+          })}
+
           <Box
             name={this.state.persons[0].name}
             age={this.state.persons[0].age}
             title={this.state.persons[0].title}
-          />
-          <Box
-            name={this.state.persons[1].name}
-            age={this.state.persons[1].age}
-            title={this.state.persons[1].title}
-          />
-          <Box
-            name={this.state.persons[2].name}
-            age={this.state.persons[2].age}
-            title={this.state.persons[2].title}
           />
         </div>
       </main>
@@ -83,4 +90,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Boxes;

@@ -7,3 +7,17 @@
   margin: 1rem;
   padding: 1rem;
 }
+
+.animal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+.animalCard {
+  background-color: brown;
+  box-shadow: 0 0 5px #333;
+  padding: 1em;
+}
+.animalCard img {
+  width: 200px;
+}
