@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=New+Tegomin:regular);
+@import url(https://fonts.googleapis.com/css?family=RocknRoll+One:regular);
+
+body {
+  margin: 0;
+  font-family: "RocknRoll One";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+    to right,
+    #c33764,
+    indigo,
+    #1d2671,
+    #c33764
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: cover;
+  background-attachment: fixed;
+  color: whitesmoke;
+}
+
+button {
+  margin: 3em 3em;
+  font-family: "RocknRoll One";
+  font-size: 1em;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}

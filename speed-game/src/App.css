@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.circleGroup {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.circle {
+  margin: 1em;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.green {
+  background-color: green;
+}
+.black {
+  background-color: black;
+}
+.orange {
+  background-color: orange;
+}
+.pink {
+  background-color: pink;
+}
