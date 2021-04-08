@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import Boxes from "./Boxes";
-import Animals from "./AnimalCard";
+import Animals from "./Animals";
 
 function Home() {
   return (
