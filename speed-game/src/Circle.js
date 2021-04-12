@@ -6,7 +6,7 @@ function Circle(props) {
   // };
   return (
     <div
-      className={`circle ${props.color}`}
+      className={`circle ${props.color} ${props.active ? "active" : ""}`}
       onClick={props.click} /* onClick={clicked} */
     ></div>
   ); // style={{backgroundColor: props.color}}
