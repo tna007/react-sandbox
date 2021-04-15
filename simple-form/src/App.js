@@ -20,18 +20,28 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log(
-      this.state.firstName,
-      this.state.lastName,
-      this.state.phoneNumber,
-      this.state.role,
-      this.state.message
-    );
   };
+
+  showPopUpHandler = (event) => {
+    event.preventDefault();
+    this.setState({
+      showPopUp: true,
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <Form value={this.changeHandler} />
+        {this.state.showPopUp && (
+          <PopUp
+            firstName={this.state.firstName}
+            lastName={this.state.lastName}
+            phoneNumber={this.state.phoneNumber}
+            role={this.state.role}
+            message={this.state.message}
+          />
+        )}
+        <Form value={this.changeHandler} showOverlay={this.showPopUpHandler} />
         <View
           firstName={this.state.firstName}
           lastName={this.state.lastName}
@@ -39,7 +49,6 @@ class App extends Component {
           role={this.state.role}
           message={this.state.message}
         />
-        {this.state.showPopUp && <PopUp />}
       </div>
     );
   }

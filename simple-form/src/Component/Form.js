@@ -50,7 +50,9 @@ function Form(props) {
           ></textarea>
         </div>
         <div className="button"></div>
-        <button type="submit">Send</button>
+        <button type="submit" onClick={props.showOverlay}>
+          Send
+        </button>
       </form>
     </main>
   );
