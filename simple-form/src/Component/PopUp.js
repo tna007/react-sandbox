@@ -1,6 +1,10 @@
 import React from "react";
 
 function PopUp(props) {
+  const reset = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="popUp">
       <div className="container">
@@ -10,8 +14,12 @@ function PopUp(props) {
         <p>Role:{props.role} </p>
         <p>Message: {props.message}</p>
         <div className="popUpBtn">
-          <button type="submit">Confirm. Send it</button>
-          <button type="submit">No. Do not send</button>
+          <button type="submit" onClick={reset}>
+            Confirm. Send it
+          </button>
+          <button type="submit" onClick={reset}>
+            No. Do not send
+          </button>
         </div>
       </div>
     </div>
