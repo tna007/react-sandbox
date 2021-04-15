@@ -9,7 +9,7 @@ import mySound from "./asset/sound/Stock.mp3";
 
 let clickedSound = new Audio(mySound);
 
-const randNum = function getRndInteger(min, max) {
+const randNum = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 }; // returns a randnum between included min and excluded max
 
@@ -44,7 +44,7 @@ class App extends Component {
   timer;
   SPEED = 1000;
 
-  calScore = (id) => {
+  clickHandler = (id) => {
     console.log(`You clicked ${id}`);
     clickedSound.play();
 
@@ -116,7 +116,7 @@ class App extends Component {
           key={circle.id}
           id={circle.id}
           color={circle.color}
-          click={() => this.calScore(circle.id)}
+          click={() => this.clickHandler(circle.id)} // same as click={this.clickHandler.bind(this, circle.ido)}
           active={this.state.current === circle.id}
         />
       );

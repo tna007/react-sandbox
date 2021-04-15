@@ -24,6 +24,13 @@ button {
   font-family: "RocknRoll One";
   font-size: 1em;
   width: 100px;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  color: rgba(184, 135, 11, 0.7);
 }
