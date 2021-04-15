@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { animals } from "./AnimalList";
+import Search from "./Search";
 
 const AnimalCard = (props) => {
   const getName = () => {
@@ -7,7 +9,10 @@ const AnimalCard = (props) => {
   return (
     <div className="animalCard">
       <h2>{props.name}</h2>
-      <img src={props.img} alt={props.name}></img>
+      <img
+        src={`https://source.unsplash.com/1600x900?${props.name}`}
+        alt={props.name}
+      ></img>
       <button onClick={getName}>More</button>
     </div>
   );
@@ -15,31 +20,44 @@ const AnimalCard = (props) => {
 
 class Animals extends Component {
   state = {
-    animals: [
-      {
-        id: 1,
-        name: "Fox",
-        img: "https://source.unsplash.com/xUUZcpQlqpM/1600x1000",
-      },
-      {
-        id: 2,
-        name: "Rabbit",
-        img: "https://source.unsplash.com/um1BsyEVB5U/1600x1000",
-      },
-      {
-        id: 3,
-        name: "Wolf",
-        img: "https://source.unsplash.com/WFPWB7Vum1E/1600x1000",
-      },
-    ],
+    animals: animals,
+    searchInput: "",
   };
 
+  clickHandler = (name) => {
+    alert("My name is", name);
+  };
+
+  searchHandler = (e) => {
+    this.setState({
+      searchInput: e.target.value,
+    });
+    console.log(this.state.searchInput);
+  };
   render() {
-    const animalList = this.state.animals.map((animal) => {
-      return <AnimalCard key={animal.id} name={animal.name} img={animal.img} />;
+    const animalFilter = this.state.animals.filter((obj) => {
+      return obj.name
+        .toLowerCase()
+        .includes(this.state.searchInput.toLowerCase());
     });
 
-    return <main className="animal">{animalList}</main>;
+    const animalList = animalFilter.map((animal) => {
+      return (
+        <AnimalCard
+          key={animal.name}
+          name={animal.name}
+          clickme={() => this.clickHandler(animal.name)}
+        />
+      );
+    });
+
+    return (
+      <main>
+        <Search search={this.searchHandler} />
+        <p>{this.state.searchInput}</p>
+        <div className="animal">{animalList} </div>
+      </main>
+    );
   }
 }
 export default Animals;
