@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+
 import "./App.css";
+
 import Form from "./Component/Form";
 import View from "./Component/View";
+import PopUp from "./Component/PopUp";
 
 class App extends Component {
   state = {
@@ -10,6 +13,7 @@ class App extends Component {
     phoneNumber: "",
     role: "",
     message: "",
+    showPopUp: false,
   };
 
   changeHandler = (e) => {
@@ -27,9 +31,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Hello</h1>
-        </header>
         <Form value={this.changeHandler} />
         <View
           firstName={this.state.firstName}
@@ -38,6 +39,7 @@ class App extends Component {
           role={this.state.role}
           message={this.state.message}
         />
+        {this.state.showPopUp && <PopUp />}
       </div>
     );
   }
