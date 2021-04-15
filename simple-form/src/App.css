@@ -38,9 +38,9 @@ label {
   text-align: left;
 }
 
-input {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings bc by default, textareas have a monospace font */
   font: 1em sans-serif;
 
   /* Uniform text field size */
@@ -50,7 +50,11 @@ input {
   /* Match form field borders */
   border: 1px solid #999;
 }
-
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+  height: 5em;
+}
 button {
   margin: auto;
   width: 100px;
