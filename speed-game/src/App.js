@@ -18,19 +18,15 @@ class App extends Component {
     circles: [
       {
         id: 1,
-        color: "green",
       },
       {
         id: 2,
-        color: "black",
       },
       {
         id: 3,
-        color: "pink",
       },
       {
         id: 4,
-        color: "orange",
       },
     ],
     score: 0,

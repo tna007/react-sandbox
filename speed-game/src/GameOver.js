@@ -17,7 +17,7 @@ function GameOver(props) {
   return (
     <div className="gameOver">
       <div className="result">
-        <h2>GAME OVER</h2>
+        <h1>GAME OVER</h1>
         <p>Score: {props.score}</p>
         <p>{text}</p>
         <button onClick={reset} id="close">

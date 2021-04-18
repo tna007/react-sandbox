@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+h1 {
+  font-size: 3em;
+  text-shadow: 5px 5px rgba(51, 51, 51, 0.7);
+}
 .circleGroup {
   width: 100%;
   display: flex;
@@ -15,25 +18,14 @@
   height: 150px;
   border-radius: 50%;
   background-color: gray;
-}
-
-.green {
-  background-color: green;
-}
-.black {
-  background-color: black;
-}
-.orange {
-  background-color: orange;
-}
-.pink {
-  background-color: pink;
+  border: dotted yellowgreen;
 }
 
 .active {
   background-color: yellow;
   background-image: url(https://i.gifer.com/WiCJ.gif);
   background-size: cover;
+  border: none;
 }
 
 .gameOver {
@@ -70,4 +62,20 @@
   font-size: 1rem;
   font-weight: 800;
   cursor: pointer;
+}
+
+button {
+  margin: 3em 3em;
+  font-family: "Arbutus";
+  font-size: 1em;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  color: rgba(184, 135, 11, 0.7);
 }
