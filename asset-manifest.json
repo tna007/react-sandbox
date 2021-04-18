@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-sandbox/static/css/main.80795a46.chunk.css",
+    "main.js": "/react-sandbox/static/js/main.1608f262.chunk.js",
+    "main.js.map": "/react-sandbox/static/js/main.1608f262.chunk.js.map",
+    "runtime-main.js": "/react-sandbox/static/js/runtime-main.dce96ee1.js",
+    "runtime-main.js.map": "/react-sandbox/static/js/runtime-main.dce96ee1.js.map",
+    "static/js/2.f530455b.chunk.js": "/react-sandbox/static/js/2.f530455b.chunk.js",
+    "static/js/2.f530455b.chunk.js.map": "/react-sandbox/static/js/2.f530455b.chunk.js.map",
+    "index.html": "/react-sandbox/index.html",
+    "static/css/main.80795a46.chunk.css.map": "/react-sandbox/static/css/main.80795a46.chunk.css.map",
+    "static/js/2.f530455b.chunk.js.LICENSE.txt": "/react-sandbox/static/js/2.f530455b.chunk.js.LICENSE.txt",
+    "static/media/Stock.fc1395a7.mp3": "/react-sandbox/static/media/Stock.fc1395a7.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dce96ee1.js",
+    "static/js/2.f530455b.chunk.js",
+    "static/css/main.80795a46.chunk.css",
+    "static/js/main.1608f262.chunk.js"
+  ]
+}
