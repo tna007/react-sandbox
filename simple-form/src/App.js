@@ -5,6 +5,7 @@ import "./App.css";
 import Form from "./Component/Form";
 import View from "./Component/View";
 import PopUp from "./Component/PopUp";
+import Notes from "./Component/Notes";
 
 class App extends Component {
   state = {
@@ -42,6 +43,7 @@ class App extends Component {
         {this.state.showPopUp && <PopUp {...props} />}
         <Form value={this.changeHandler} showOverlay={this.showPopUpHandler} />
         <View {...props} />
+        <Notes />
       </div>
     );
   }
