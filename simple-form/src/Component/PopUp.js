@@ -8,11 +8,21 @@ function PopUp(props) {
   return (
     <div className="popUp">
       <div className="container">
-        <p>First name: {props.firstName}</p>
-        <p>Last name: {props.lastName}</p>
-        <p>Phone number: {props.phoneNumber}</p>
-        <p>Role:{props.role} </p>
-        <p>Message: {props.message}</p>
+        <p>
+          First name: <span>{props.firstName}</span>
+        </p>
+        <p>
+          Last name: <span>{props.lastName}</span>
+        </p>
+        <p>
+          Phone number: <span>{props.phoneNumber}</span>
+        </p>
+        <p>
+          Role:<span>{props.role}</span>{" "}
+        </p>
+        <p>
+          Message: <span>{props.message}</span>
+        </p>
         <div className="popUpBtn">
           <button type="submit" onClick={reset}>
             Confirm. Send it

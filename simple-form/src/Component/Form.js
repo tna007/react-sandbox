@@ -37,7 +37,10 @@ function Form(props) {
 
         <div id="form-line">
           <label htmlFor="role">Role</label>
-          <input type="select" name="role" onChange={props.value}></input>
+          <select name="role" onChange={props.value}>
+            <option value="Student">Student</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
 
         <div id="form-line">
