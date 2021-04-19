@@ -15,7 +15,18 @@ class App extends Component {
     role: "",
     message: "",
     showPopUp: false,
+    notes: [],
   };
+
+  componentDidMount() {
+    fetch("http://localhost:3001/notes")
+      .then((resp) => resp.json())
+      .then((json) =>
+        this.setState({
+          notes: json,
+        })
+      );
+  }
 
   changeHandler = (e) => {
     this.setState({
@@ -43,7 +54,7 @@ class App extends Component {
         {this.state.showPopUp && <PopUp {...props} />}
         <Form value={this.changeHandler} showOverlay={this.showPopUpHandler} />
         <View {...props} />
-        <Notes />
+        <Notes notes={this.state.notes} />
       </div>
     );
   }
