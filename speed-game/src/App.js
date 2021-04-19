@@ -35,6 +35,7 @@ class App extends Component {
     result: false,
     start: false,
     clicked: false,
+    stop: true,
   };
 
   timer;
@@ -95,6 +96,7 @@ class App extends Component {
     this.nextCircle();
     this.setState({
       start: true,
+      stop: false,
     });
   };
 
@@ -127,7 +129,9 @@ class App extends Component {
         <button onClick={this.startGame} disabled={this.state.start}>
           Start
         </button>
-        <button onClick={this.clearGame}>Stop</button>
+        <button onClick={this.clearGame} disabled={this.state.stop}>
+          Stop
+        </button>
         {this.state.result && <GameOver score={this.state.score} />}
       </div>
     );
