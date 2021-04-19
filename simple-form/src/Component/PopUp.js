@@ -1,6 +1,6 @@
 import React from "react";
 
-function PopUp(props) {
+function PopUp({ firstName, lastName, phoneNumber, role, message }) {
   const reset = () => {
     window.location.reload();
   };
@@ -9,19 +9,19 @@ function PopUp(props) {
     <div className="popUp">
       <div className="container">
         <p>
-          First name: <span>{props.firstName}</span>
+          First name: <span>{firstName}</span>
         </p>
         <p>
-          Last name: <span>{props.lastName}</span>
+          Last name: <span>{lastName}</span>
         </p>
         <p>
-          Phone number: <span>{props.phoneNumber}</span>
+          Phone number: <span>{phoneNumber}</span>
         </p>
         <p>
-          Role:<span>{props.role}</span>{" "}
+          Role:<span>{role}</span>{" "}
         </p>
         <p>
-          Message: <span>{props.message}</span>
+          Message: <span>{message}</span>
         </p>
         <div className="popUpBtn">
           <button type="submit" onClick={reset}>

@@ -1,14 +1,14 @@
 import React from "react";
 
-function View(props) {
+function View({ firstName, lastName, phoneNumber, role, message }) {
   return (
     <footer>
       <h3>This is your input</h3>
-      <p>First name: {props.firstName}</p>
-      <p>Last name: {props.lastName}</p>
-      <p>Phone number: {props.phoneNumber}</p>
-      <p>Role:{props.role} </p>
-      <p>Message: {props.message}</p>
+      <p>First name: {firstName}</p>
+      <p>Last name: {lastName}</p>
+      <p>Phone number: {phoneNumber}</p>
+      <p>Role:{role} </p>
+      <p>Message: {message}</p>
     </footer>
   );
 }

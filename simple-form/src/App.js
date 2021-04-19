@@ -30,25 +30,18 @@ class App extends Component {
   };
 
   render() {
+    const props = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      phoneNumber: this.state.phoneNumber,
+      role: this.state.role,
+      message: this.state.message,
+    };
     return (
       <div className="App">
-        {this.state.showPopUp && (
-          <PopUp
-            firstName={this.state.firstName}
-            lastName={this.state.lastName}
-            phoneNumber={this.state.phoneNumber}
-            role={this.state.role}
-            message={this.state.message}
-          />
-        )}
+        {this.state.showPopUp && <PopUp {...props} />}
         <Form value={this.changeHandler} showOverlay={this.showPopUpHandler} />
-        <View
-          firstName={this.state.firstName}
-          lastName={this.state.lastName}
-          phoneNumber={this.state.phoneNumber}
-          role={this.state.role}
-          message={this.state.message}
-        />
+        <View {...props} />
       </div>
     );
   }

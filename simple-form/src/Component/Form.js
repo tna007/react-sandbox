@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form(props) {
+function Form({ value, showOverlay }) {
   return (
     <main>
       <form id="form">
@@ -9,7 +9,7 @@ function Form(props) {
           <input
             type="text"
             name="firstName"
-            onChange={props.value}
+            onChange={value}
             placeholder="First name"
             required
           />
@@ -19,7 +19,7 @@ function Form(props) {
           <input
             type="text"
             name="lastName"
-            onChange={props.value}
+            onChange={value}
             placeholder="Last name"
             required
           />
@@ -30,14 +30,14 @@ function Form(props) {
           <input
             type="tel"
             name="phoneNumber"
-            onChange={props.value}
+            onChange={value}
             placeholder="Enter phone number"
           />
         </div>
 
         <div id="form-line">
           <label htmlFor="role">Role</label>
-          <select name="role" onChange={props.value}>
+          <select name="role" onChange={value}>
             <option value="Student">Student</option>
             <option value="Other">Other</option>
           </select>
@@ -48,12 +48,12 @@ function Form(props) {
           <textarea
             id="msg"
             name="message"
-            onChange={props.value}
+            onChange={value}
             placeholder="Enter your message"
           ></textarea>
         </div>
         <div className="button"></div>
-        <button type="submit" onClick={props.showOverlay}>
+        <button type="submit" onClick={showOverlay}>
           Send
         </button>
       </form>
