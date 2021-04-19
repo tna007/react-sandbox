@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstName": "Anna",
+      "lastName": "Lio",
+      "phoneNumber": 456489713,
+      "message": "something",
+      "role": "student"
+    },
+    {
+      "id": 2,
+      "firstName": "Bella",
+      "lastName": "Oz",
+      "phoneNumber": 11567893,
+      "message": "something weird",
+      "role": "other"
+    },
+    {
+      "id": 3,
+      "firstName": "Cyndi",
+      "lastName": "Bez",
+      "phoneNumber": 5678949713,
+      "message": "something cool",
+      "role": "student"
+    }
+  ]
+}
