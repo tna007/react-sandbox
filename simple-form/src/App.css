@@ -88,3 +88,22 @@ button {
   height: 5vh;
   margin: 1em;
 }
+
+ul {
+  list-style: none;
+}
+li {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+}
+.notes h1 {
+  text-align: center;
+}
+.view,
+.notes {
+  text-align: left;
+}

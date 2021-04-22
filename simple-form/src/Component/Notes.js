@@ -2,7 +2,7 @@ import React from "react";
 
 function Notes({ notes }) {
   return (
-    <div>
+    <div className="notes">
       <h1>Notes</h1>
       <ul>
         {notes.map((note) => {

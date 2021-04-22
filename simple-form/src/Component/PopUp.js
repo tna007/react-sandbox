@@ -1,6 +1,6 @@
 import React from "react";
 
-function PopUp({ firstName, lastName, phoneNumber, role, message }) {
+function PopUp({ firstName, lastName, phoneNumber, role, message, submit }) {
   const reset = () => {
     window.location.reload();
   };
@@ -8,6 +8,7 @@ function PopUp({ firstName, lastName, phoneNumber, role, message }) {
   return (
     <div className="popUp">
       <div className="container">
+        <h1>Your note</h1>
         <p>
           First name: <span>{firstName}</span>
         </p>
@@ -24,7 +25,7 @@ function PopUp({ firstName, lastName, phoneNumber, role, message }) {
           Message: <span>{message}</span>
         </p>
         <div className="popUpBtn">
-          <button type="submit" onClick={reset}>
+          <button type="submit" onClick={submit}>
             Confirm. Send it
           </button>
           <button type="submit" onClick={reset}>

@@ -9,11 +9,13 @@ import Notes from "./Component/Notes";
 
 class App extends Component {
   state = {
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    role: "",
-    message: "",
+    inputData: {
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      role: "",
+      message: "",
+    },
     showPopUp: false,
     notes: [],
   };
@@ -30,7 +32,7 @@ class App extends Component {
 
   changeHandler = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      inputData: { ...this.state.inputData, [e.target.name]: e.target.value },
     });
   };
 
@@ -41,20 +43,32 @@ class App extends Component {
     });
   };
 
-  render() {
-    const props = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      phoneNumber: this.state.phoneNumber,
-      role: this.state.role,
-      message: this.state.message,
+  sendDataHandler = () => {
+    const requestOption = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.state.inputData),
     };
+    fetch("http://localhost:3001/notes", requestOption)
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        console.log(data.id);
+      });
+    alert("Note posted", window.location.reload());
+  };
+
+  render() {
     return (
       <div className="App">
-        {this.state.showPopUp && <PopUp {...props} />}
+        {this.state.showPopUp && (
+          <PopUp {...this.state.inputData} submit={this.sendDataHandler} />
+        )}
         <Form value={this.changeHandler} showOverlay={this.showPopUpHandler} />
-        <View {...props} />
-        <Notes notes={this.state.notes} />
+        <section>
+          <View {...this.state.inputData} />
+          <Notes notes={this.state.notes} />
+        </section>
       </div>
     );
   }
